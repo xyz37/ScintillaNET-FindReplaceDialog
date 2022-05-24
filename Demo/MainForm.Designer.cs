@@ -1,6 +1,6 @@
 ﻿namespace Demo
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.scintilla1 = new ScintillaNET.Scintilla();
             this.GotoButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -49,22 +49,30 @@
             // 
             // scintilla1
             // 
+            this.scintilla1.AnnotationVisible = ScintillaNET.Annotation.Standard;
+            this.scintilla1.AutoCMaxHeight = 9;
+            this.scintilla1.BiDirectionality = ScintillaNET.BiDirectionalDisplayType.Disabled;
             this.scintilla1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scintilla1.Location = new System.Drawing.Point(3, 3);
+            this.scintilla1.Font = new System.Drawing.Font("D2Coding", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.scintilla1.Location = new System.Drawing.Point(4, 3);
+            this.scintilla1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.scintilla1.Name = "scintilla1";
             this.scintilla1.ScrollWidth = 5001;
-            this.scintilla1.Size = new System.Drawing.Size(701, 218);
+            this.scintilla1.Size = new System.Drawing.Size(1776, 565);
+            this.scintilla1.TabIndents = true;
             this.scintilla1.TabIndex = 0;
             this.scintilla1.Text = resources.GetString("scintilla1.Text");
-            this.scintilla1.WrapMode = ScintillaNET.WrapMode.Word;
+            this.scintilla1.UseRightToLeftReadingLayout = false;
+            this.scintilla1.WrapMode = ScintillaNET.WrapMode.None;
             this.scintilla1.Enter += new System.EventHandler(this.genericScintilla1_Enter);
             this.scintilla1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.genericScintilla_KeyDown);
             // 
             // GotoButton
             // 
-            this.GotoButton.Location = new System.Drawing.Point(730, 34);
+            this.GotoButton.Location = new System.Drawing.Point(852, 39);
+            this.GotoButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GotoButton.Name = "GotoButton";
-            this.GotoButton.Size = new System.Drawing.Size(75, 23);
+            this.GotoButton.Size = new System.Drawing.Size(88, 27);
             this.GotoButton.TabIndex = 2;
             this.GotoButton.Text = "Goto";
             this.GotoButton.UseVisualStyleBackColor = true;
@@ -75,7 +83,8 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(12, 34);
+            this.splitContainer1.Location = new System.Drawing.Point(14, 39);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -86,8 +95,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.findAllResultsPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(715, 412);
-            this.splitContainer1.SplitterDistance = 250;
+            this.splitContainer1.Size = new System.Drawing.Size(1792, 988);
+            this.splitContainer1.SplitterDistance = 599;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 4;
             // 
             // tabControl1
@@ -96,18 +106,20 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(715, 250);
+            this.tabControl1.Size = new System.Drawing.Size(1792, 599);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.scintilla1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(707, 224);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPage1.Size = new System.Drawing.Size(1784, 571);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -115,24 +127,31 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.scintilla2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(707, 224);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPage2.Size = new System.Drawing.Size(826, 260);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // scintilla2
             // 
+            this.scintilla2.AutoCMaxHeight = 9;
+            this.scintilla2.BiDirectionality = ScintillaNET.BiDirectionalDisplayType.Disabled;
             this.scintilla2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scintilla2.Location = new System.Drawing.Point(3, 3);
+            this.scintilla2.Font = new System.Drawing.Font("D2Coding", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.scintilla2.Location = new System.Drawing.Point(4, 3);
+            this.scintilla2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.scintilla2.Name = "scintilla2";
             this.scintilla2.ScrollWidth = 5001;
-            this.scintilla2.Size = new System.Drawing.Size(701, 218);
+            this.scintilla2.Size = new System.Drawing.Size(818, 254);
+            this.scintilla2.TabIndents = true;
             this.scintilla2.TabIndex = 1;
             this.scintilla2.Text = resources.GetString("scintilla2.Text");
-            this.scintilla2.WrapMode = ScintillaNET.WrapMode.Word;
+            this.scintilla2.UseRightToLeftReadingLayout = false;
+            this.scintilla2.WrapMode = ScintillaNET.WrapMode.None;
             this.scintilla2.Enter += new System.EventHandler(this.genericScintilla1_Enter);
             this.scintilla2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.genericScintilla_KeyDown);
             // 
@@ -140,9 +159,10 @@
             // 
             this.findAllResultsPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.findAllResultsPanel1.Location = new System.Drawing.Point(0, 0);
+            this.findAllResultsPanel1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.findAllResultsPanel1.Name = "findAllResultsPanel1";
             this.findAllResultsPanel1.Scintilla = null;
-            this.findAllResultsPanel1.Size = new System.Drawing.Size(715, 158);
+            this.findAllResultsPanel1.Size = new System.Drawing.Size(1792, 384);
             this.findAllResultsPanel1.TabIndex = 3;
             // 
             // incrementalSearcher1
@@ -152,23 +172,25 @@
             this.incrementalSearcher1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.incrementalSearcher1.BackColor = System.Drawing.Color.Transparent;
             this.incrementalSearcher1.FindReplace = null;
-            this.incrementalSearcher1.Location = new System.Drawing.Point(9, 9);
+            this.incrementalSearcher1.Location = new System.Drawing.Point(10, 10);
             this.incrementalSearcher1.Margin = new System.Windows.Forms.Padding(0);
             this.incrementalSearcher1.Name = "incrementalSearcher1";
             this.incrementalSearcher1.Scintilla = null;
-            this.incrementalSearcher1.Size = new System.Drawing.Size(259, 22);
+            this.incrementalSearcher1.Size = new System.Drawing.Size(287, 24);
             this.incrementalSearcher1.TabIndex = 1;
             this.incrementalSearcher1.ToolItem = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 458);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.GotoButton);
             this.Controls.Add(this.incrementalSearcher1);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
